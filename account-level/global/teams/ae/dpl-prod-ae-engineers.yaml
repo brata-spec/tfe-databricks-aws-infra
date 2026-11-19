@@ -1,0 +1,9 @@
+# Group: dpl-prod-ae-engineers
+# AE engineers in prod: USER on workspace dpl-prod-ae; people read in prod; pipelines write as a service principal.
+environment: prod
+members:
+  users: []                 # e.g. - engineer@example.com
+workspace_permission: USER
+catalog_grants:
+  dpl_prod_ae:
+    privileges: [USE_CATALOG, USE_SCHEMA, SELECT, READ_VOLUME]

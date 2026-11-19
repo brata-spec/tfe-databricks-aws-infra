@@ -1,0 +1,9 @@
+# Group: dpl-prod-de-admins
+# DE team leads in prod: ADMIN on workspace dpl-prod-de.
+environment: prod
+members:
+  users: []                 # e.g. - lead@example.com
+workspace_permission: ADMIN
+catalog_grants:
+  dpl_prod_de:
+    privileges: [USE_CATALOG, USE_SCHEMA, SELECT, READ_VOLUME]   # read in prod; changes go through Terraform

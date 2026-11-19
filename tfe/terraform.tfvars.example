@@ -1,0 +1,14 @@
+# Copy to terraform.tfvars (gitignored). No secrets in here.
+tfe_organization        = "Dataops-specs"
+databricks_account_id   = "9d2d7831-b28c-43e4-9b91-bd859a24185a"
+deployer_application_id = "<application (client) ID of dpl-tfe-deployer>"
+
+github_repository            = "brata-spec/dataops-databricks-platform"
+github_app_installation_name = "brata-spec" # null + oauth_token_id = "ot-..." on Terraform Enterprise
+
+environments = {
+  dev  = { aws_account_id = "473640421776", branch = "develop", auto_apply = true }
+  prod = { aws_account_id = "283923227867", branch = "main", auto_apply = false }
+}
+
+teams = ["ae", "de"]

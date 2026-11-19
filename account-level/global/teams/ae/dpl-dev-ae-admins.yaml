@@ -1,0 +1,9 @@
+# Group: dpl-dev-ae-admins
+# AE team leads in dev: ADMIN on workspace dpl-dev-ae.
+environment: dev
+members:
+  users: []                 # e.g. - lead@example.com
+workspace_permission: ADMIN
+catalog_grants:
+  dpl_dev_ae:
+    privileges: [ALL_PRIVILEGES]

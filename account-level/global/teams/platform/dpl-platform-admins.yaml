@@ -1,0 +1,10 @@
+# Group: dpl-platform-admins            (file name = group name)
+# Platform team. ADMIN on every workspace of every team, in every environment.
+# Owns the Unity Catalog objects (owner_group in unity-catalog/<team>/<env>.tfvars).
+# The deployer service principal joins automatically (deployer_groups in global.tfvars).
+environment: all
+account_admin: false        # true = Databricks ACCOUNT admin (use sparingly)
+members:
+  users: []                 # e.g. - priyabrata@example.com   (must exist in the Databricks account)
+  service_principals: []    # application (client) IDs
+workspace_permission: ADMIN

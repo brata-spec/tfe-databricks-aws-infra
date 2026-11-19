@@ -1,0 +1,9 @@
+# Group: dpl-prod-ae-admins
+# AE team leads in prod: ADMIN on workspace dpl-prod-ae.
+environment: prod
+members:
+  users: []                 # e.g. - lead@example.com
+workspace_permission: ADMIN
+catalog_grants:
+  dpl_prod_ae:
+    privileges: [USE_CATALOG, USE_SCHEMA, SELECT, READ_VOLUME]   # read in prod; changes go through Terraform

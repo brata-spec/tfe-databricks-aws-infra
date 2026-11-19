@@ -1,0 +1,32 @@
+# Last matching pattern wins. Replace the @org/team handles with your GitHub teams.
+
+*                                   @brata-spec
+
+# Platform team: shared code, account level, TFE wiring, AWS bootstrap
+/modules/                           @brata-spec
+/account-level/                     @brata-spec
+/workspace-level/root/              @brata-spec
+/unity-catalog/root/                @brata-spec
+/tfe/                               @brata-spec
+/bootstrap/                         @brata-spec
+/scripts/                           @brata-spec
+
+# Teams own their groups (members, workspace permission, initial catalog grants).
+# PR goes into main (dpl-account-global tracks main).
+/account-level/global/teams/de/     @brata-spec
+/account-level/global/teams/ae/     @brata-spec
+/account-level/global/teams/de/dpl-prod-*.yaml   @brata-spec
+/account-level/global/teams/ae/dpl-prod-*.yaml   @brata-spec
+/account-level/global/teams/platform/            @brata-spec
+
+# Teams own their values. DEV: team approval is enough. PROD: team + platform.
+/workspace-level/de/dev.tfvars      @brata-spec
+/unity-catalog/de/dev.tfvars        @brata-spec
+/workspace-level/ae/dev.tfvars      @brata-spec
+/unity-catalog/ae/dev.tfvars        @brata-spec
+/workspace-level/*/prod.tfvars      @brata-spec
+/unity-catalog/*/prod.tfvars        @brata-spec
+
+# Example for a real org:
+#   /workspace-level/de/dev.tfvars    @your-org/data-engineering
+#   /workspace-level/*/prod.tfvars    @your-org/data-platform @your-org/data-engineering

@@ -1,0 +1,11 @@
+# Group: dpl-dev-ae-analysts
+# AE analysts in dev: USER on workspace dpl-dev-ae; read the gold layer only.
+environment: dev
+members:
+  users: []                 # e.g. - analyst@example.com
+workspace_permission: USER
+catalog_grants:
+  dpl_dev_ae:
+    privileges: [USE_CATALOG]
+    schemas:
+      gold: [USE_SCHEMA, SELECT]
