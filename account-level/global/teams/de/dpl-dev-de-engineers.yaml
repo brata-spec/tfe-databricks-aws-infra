@@ -2,8 +2,29 @@
 # DE engineers in dev: USER on workspace dpl-dev-de; engineers build in dev.
 environment: dev
 members:
-  users: []                 # e.g. - engineer@example.com
+  users:                    # Databricks user names (e-mails); must already exist in the account
+    - aarav.sharma@example.com
+    - diya.patel@example.com
+    - rohan.mehta@example.com
+    - ananya.iyer@example.com
+    - vikram.singh@example.com
+    - sneha.reddy@example.com
+    - karan.verma@example.com
+    - priya.nair@example.com
+    - arjun.das@example.com
+    - meera.joshi@example.com
+  service_principals: []    # application (client) IDs, e.g. a pipeline SP
 workspace_permission: USER
 catalog_grants:
   dpl_dev_de:
-    privileges: [USE_CATALOG, USE_SCHEMA, SELECT, MODIFY, CREATE_SCHEMA, CREATE_TABLE, CREATE_VOLUME, READ_VOLUME, WRITE_VOLUME, CREATE_FUNCTION]
+    privileges:
+      - USE_CATALOG
+      - USE_SCHEMA
+      - SELECT
+      - MODIFY
+      - CREATE_SCHEMA
+      - CREATE_TABLE
+      - CREATE_VOLUME
+      - READ_VOLUME
+      - WRITE_VOLUME
+      - CREATE_FUNCTION
